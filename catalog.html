@@ -49,10 +49,13 @@
       </fieldset>
       <fieldset class="form-section price">
         <legend>Стоимость, &#8381;:</legend>
+        <input type="number" size="12" name="num-from" min="0" max="12000" step="1000" value="0">
+        <input type="number" size="12" name="num-to" min="0" max="12000" step="1000" value="9000"><br>
         <input type="range" name="price" min="0" max="12000" step="1000" value="9000">
       </fieldset>
       <fieldset class="form-section buttons">
-
+        <input type="submit" value="применить">
+        <input type="reset" value="сбросить">
       </fieldset>
     </form>
    </main>
