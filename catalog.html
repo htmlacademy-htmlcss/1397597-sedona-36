@@ -26,7 +26,7 @@
       </nav>
     </header>
 
-   <main class="main-content container">
+    <main class="main-content container">
     <section class="selection">
       <h1>Гостиницы Седоны</h1>
       <div class="bread-crumbs">
@@ -57,10 +57,26 @@
         <input type="submit" value="применить">
         <input type="reset" value="сбросить">
       </fieldset>
+      <section class="search-results">
+        <div class="sorting">
+          <span>Найдено гостиниц: 38</span>
+          <select class="sorting-options">
+            <option value="cheap-first">Сначала дешевые</option>
+          </select>
+          <ul class="display-options">
+            <li><button class="grid">сеткой</button></li>
+            <li><button class="one-card">одна карта</button></li>
+            <li><button class="list">списком</button></li>
+          </ul>
+        </div>
+        <div class="results"></div>
+        <hr>
+        <div class="pagination"></div>
+      </section>
     </form>
-   </main>
+    </main>
 
-   <footer class="page-footer container">
+    <footer class="page-footer container">
     <section class="contacts">
       <a href="https://vk.com/htmlacademy">В контакте</a>
       <a href="https://t.me/htmlacademy ">Телеграм</a>
@@ -68,7 +84,7 @@
     </section>
     <p class="phone">+7 (812) 812-12-12</p>
     <a href="https://htmlacademy.ru/">HTMLAcademy</a>
-  </footer>
+    </footer>
 
-</body>
+  </body>
 </html>
