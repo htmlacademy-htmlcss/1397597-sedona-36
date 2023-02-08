@@ -1,5 +1,137 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+header, main,
+footer, nav,
+ul, li, section,
+p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Header */
+
+.page-header {
+  background-color: #ffffff;
+}
+
+.navigation-link{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Main */
+
+.jumbotron {
+background: #ffffff url(../images/index-bg.jpg) no-repeat 0 0;
+width: 1200px;
+height: 746px;
+}
+
+.heading {
+  padding-top: 554px;
+  width: 620px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.jumbotron p:last-child {
+  margin: 0 auto;
+  margin-top: 25px;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+.item-card {
+  width: 400px;
+  height: 385px;
+}
+
+.card-text {
+  width: 230px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.advantage-item:first-child .item-card,
+.advantage-item:last-child .item-card {
+  background-color: #82b3d3;
+  color: #FFFFFF;
+}
+
+.advantage-item:nth-child(2) .item-card,
+.advantage-item:nth-child(4) .item-card {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-item:nth-child(3) .item-card {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.advantage-item:nth-child(2) .item-card,
+.advantage-item:nth-child(3) .item-card,
+.advantage-item:nth-child(4) .item-card {
+  color: #333333;
 }

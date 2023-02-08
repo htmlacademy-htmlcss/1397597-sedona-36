@@ -3,25 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="styles/fonts.css">
 		<link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <h1 id="top" class="visually-hidden">Городок Седона в Аризоне</h1>
-    <header class="header container">
+    <header class="page-header container">
       <a href="#">
         <img src="images/logo-sedona.svg" alt="city of sedona">
       </a>
       <nav class="navigation">
-        <ul class="main-menu">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">О Седоне</a></li>
-          <li><a href="#">Гостиницы</a></li>
+        <ul class="navigation-list">
+          <li><a class="navigation-link" href="#">Главная</a></li>
+          <li><a class="navigation-link" href="#">О Седоне</a></li>
+          <li><a class="navigation-link" href="#">Гостиницы</a></li>
         </ul>
-        <ul class="right-menu">
-          <li><a href="#">Поиск</a></li>
-          <li><a href="#">Избранное</a></li>
-          <li><a href="#">Хочу сюда!</a></li>
+        <ul class="navigation-user">
+          <li><a class="user-link" href="#"><span class="visually-hidden">Поиск</span></a></li>
+          <li><a class="user-link" href="#"><span class="visually-hidden">Избранное</span></a></li>
+          <li><a class="user-link button" href="#">Хочу сюда!</a></li>
         </ul>
       </nav>
     </header>
@@ -34,26 +33,36 @@
       <section class="features">
         <ul class="advantages">
           <li class="advantage-item">
-            <h2>Настоящий городок</h2>
-            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <div class="item-card">
+              <h2>Настоящий городок</h2>
+              <p class="card-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
             <img src="images/photo-sedona.jpg" alt="город Седона">
           </li>
           <li class="advantage-item">
-            <h2>Небольшая площадь</h2>
-            <p>Все достопримечательности находятся очень близко</p>
+            <div class="item-card">
+              <h2>Небольшая площадь</h2>
+              <p class="card-text">Все достопримечательности находятся очень близко</p>
+            </div>
           </li>
           <li class="advantage-item">
-            <h2>Красивая дорога</h2>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <div class="item-card">
+              <h2>Красивая дорога</h2>
+              <p class="card-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
           </li>
           <li class="advantage-item">
-            <h2>Мало туристов</h2>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
+            <div class="item-card">
+              <h2>Мало туристов</h2>
+              <p class="card-text">Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
           </li>
-          <li>
+          <li class="advantage-item">
             <img src="images/devil's-bridge.jpg" alt="Мост Дьявола">
-            <h2>Там есть мост дьявола</h2>
-            <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <div class="item-card">
+              <h2>Там есть мост дьявола</h2>
+              <p class="card-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </div>
           </li>
         </ul>
       </section>
