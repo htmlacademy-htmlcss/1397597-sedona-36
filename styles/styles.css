@@ -14,15 +14,15 @@
   font-display: swap;
 }
 
-header, main,
-footer, nav,
-ul, li, section,
-p, h1, h2, h3 {
-  margin: 0;
-  padding: 0;
+html {
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -31,15 +31,13 @@ body {
 }
 
 h2 {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-}
-
-ul {
-  list-style: none;
 }
 
 .container {
@@ -66,6 +64,16 @@ ul {
   background-color: #ffffff;
 }
 
+.navigation {
+  display: flex;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+}
+
 .navigation-link{
   font-size: 20px;
   line-height: 24px;
@@ -84,15 +92,26 @@ width: 1200px;
 height: 746px;
 }
 
+.advantages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .heading {
-  padding-top: 554px;
-  width: 620px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   margin: 0 auto;
+}
+
+.jumbotron .heading {
+  padding-top: 554px;
+  width: 620px;
 }
 
 .jumbotron p:last-child {
@@ -105,14 +124,41 @@ height: 746px;
 }
 
 .item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 30px;
   width: 400px;
   height: 385px;
+}
+
+.item-card h2 {
+  width: 175px;
+  margin: 0 auto;
+}
+
+.divider {
+  margin: 0 auto;
+  width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.gray-divider {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .card-text {
   width: 230px;
   text-align: center;
   margin: 0 auto;
+}
+
+.advantage-item:first-child,
+.advantage-item:last-child {
+  background-color: #82b3d3;
+  color: #FFFFFF;
+  display: flex;
 }
 
 .advantage-item:first-child .item-card,
@@ -136,19 +182,73 @@ height: 746px;
   color: #333333;
 }
 
+.offers .heading {
+  margin-top: 64px;
+  width: 505px;
+}
+
 .subtitle {
+  margin: 0 auto;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
   color: #333333;
 }
 
-.item-offer {
-  width: 400px;
-  height: 385px;
+.offers .subtitle {
+  margin-top: 20px;
+  width: 505px;
 }
 
-.item-offer:first-child .offer-card,
-.item-offer:last-child .offer-card {
+.offers-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 64px;
+  list-style: none;
+  display: flex;
+
+}
+
+.item-offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 30px;
+  width: 400px;
+  height: 385px;
   background: rgba(131, 179, 211, 0.12);
+}
+
+.item-offer:nth-child(2) {
+  background: none;
+}
+
+.item-offer h2 {
+  margin-top: 102px;
+  position: relative;
+}
+
+/* left: center? */
+.item-offer h2::before {
+  position: absolute;
+  content: "";
+  width: 75px;
+  height: 72px;
+  left: calc(50% - 37.5px);
+  top: -102px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.housing::before {
+  background-image: url("../images/offers-housing.svg");
+}
+
+.burgers::before {
+  background-image: url("../images/offers-burger.svg");
+}
+
+.gifts::before {
+  background-image: url("../images/offers-gifts.svg");
 }
