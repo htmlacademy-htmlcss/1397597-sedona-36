@@ -25,7 +25,7 @@
       </nav>
     </header>
 
-    <main class="main-content container">
+    <main class="main-content">
       <section class="jumbotron">
           <p class="heading">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
           <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -62,7 +62,7 @@
             </div>
           </li>
           <li class="advantage-item">
-            <img src="images/devil's-bridge.jpg" alt="Мост Дьявола" width="800" height="385">
+            <img src="images/devil-bridge.jpg" alt="Мост Дьявола" width="800" height="385">
             <div class="item-card">
               <h2>Там есть мост дьявола</h2>
                 <div class="divider"></div>
@@ -76,15 +76,18 @@
         <p class="subtitle">Опытный персонал и качественное обслуживание!</p>
         <ul class="offers-list">
           <li class="item-offer">
-            <h2 class="housing">Жильё</h2>
+            <div class="icon-offer icon-housing"></div>
+            <h2>Жильё</h2>
             <p class="card-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="item-offer">
-            <h2 class="burgers">Еда</h2>
+            <div class="icon-offer icon-burgers"></div>
+            <h2>Еда</h2>
             <p class="card-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="item-offer">
-            <h2 class="gifts">Сувениры</h2>
+            <div class="icon-offer icon-gifts"></div>
+            <h2>Сувениры</h2>
             <p class="card-text">Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
@@ -92,26 +95,25 @@
       <section class="booking">
         <p class="heading">Заинтересовались?</p>
         <p class="subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="catalog.html">поиск гостиницы в седоне</a>
+        <a href="catalog.html" class="button">поиск гостиницы в седоне</a>
       </section>
       <section class="subscribe">
         <p class="heading">Подпишитесь на рассылку</p>
         <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="#" method="get">
-          <input type="text" name="e-mail" value="Ваш e-mail">
-          <input type="submit" value="подписаться">
+        <form action="#" method="post" class="subscribe-form">
+          <input type="text" name="email" value="Ваш e-mail" class="email"><input type="submit" value="подписаться" class="button subscribe-button">
         </form>
       </section>
     </main>
 
     <footer class="page-footer container">
-      <section class="contacts">
-        <a href="https://vk.com/htmlacademy">В контакте</a>
-        <a href="https://t.me/htmlacademy ">Телеграм</a>
-        <a href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
-      </section>
+      <ul class="contacts">
+        <li><a href="https://vk.com/htmlacademy" class="vk"><span class="visually-hidden">В контакте</span></a></li>
+        <li><a href="https://t.me/htmlacademy" class="tg"><span class="visually-hidden">Телеграм</span></a></li>
+        <li><a href="https://www.youtube.com/user/htmlacademyru" class="yt"><span class="visually-hidden">Youtube</span></a></li>
+      </ul>
       <p class="phone">+7 (812) 812-12-12</p>
-      <a href="https://htmlacademy.ru/">HTMLAcademy</a>
+      <a href="https://htmlacademy.ru/" class="academy"><span class="visually-hidden">HTMLAcademy</span></a>
     </footer>
 
   </body>

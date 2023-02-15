@@ -19,13 +19,15 @@ html {
 }
 
 body {
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  font-weight: 400;
   color: #000000;
   background-color: #F2F2F2;
 }
@@ -41,8 +43,7 @@ h2 {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
+  padding: 0 70px;
 }
 
 .visually-hidden {
@@ -86,6 +87,10 @@ h2 {
 
 /* Main */
 
+.main-content {
+  flex-grow: 1;
+}
+
 .jumbotron {
 background: #ffffff url(../images/index-bg.jpg) no-repeat 0 0;
 width: 1200px;
@@ -127,6 +132,7 @@ height: 746px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   row-gap: 30px;
   width: 400px;
   height: 385px;
@@ -134,7 +140,6 @@ height: 746px;
 
 .item-card h2 {
   width: 175px;
-  margin: 0 auto;
 }
 
 .divider {
@@ -151,7 +156,6 @@ height: 746px;
 .card-text {
   width: 230px;
   text-align: center;
-  margin: 0 auto;
 }
 
 .advantage-item:first-child,
@@ -182,9 +186,17 @@ height: 746px;
   color: #333333;
 }
 
+.offers {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .offers .heading {
-  margin-top: 64px;
   width: 505px;
+  margin-top: 64px;
 }
 
 .subtitle {
@@ -206,13 +218,13 @@ height: 746px;
   margin-top: 64px;
   list-style: none;
   display: flex;
-
 }
 
 .item-offer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   row-gap: 30px;
   width: 400px;
   height: 385px;
@@ -226,29 +238,148 @@ height: 746px;
 .item-offer h2 {
   margin-top: 102px;
   position: relative;
+  margin: 0 auto;
 }
 
-/* left: center? */
-.item-offer h2::before {
-  position: absolute;
-  content: "";
+.icon-offer {
   width: 75px;
   height: 72px;
-  left: calc(50% - 37.5px);
-  top: -102px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
 }
 
-.housing::before {
-  background-image: url("../images/offers-housing.svg");
+.icon-housing {
+  background: url("../images/offers-housing.svg") no-repeat center/contain;
 }
 
-.burgers::before {
-  background-image: url("../images/offers-burger.svg");
+.icon-burgers {
+  background: url("../images/offers-burger.svg") no-repeat center/contain;
 }
 
-.gifts::before {
-  background-image: url("../images/offers-gifts.svg");
+.icon-gifts {
+  background: url("../images/offers-gifts.svg") no-repeat center/contain;
+}
+
+.booking {
+  height: 406px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.booking .subtitle {
+  width: 592px;
+  margin-top: 20px;
+}
+
+.booking .button {
+  margin-top: 54px;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #4b6789 url(../images/bgc-subscribe.jpg) no-repeat 0 0;
+}
+
+.subscribe .heading {
+  color: #FFFFFF;
+  margin-top: 96px;
+}
+
+.subscribe .subtitle {
+  width: 475px;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.subscribe-form {
+  margin: 0;
+  padding: 0;
+  margin-top: 54px;
+  margin-bottom: 104px;
+}
+
+.subscribe .email {
+  font-size: 18px;
+  line-height: 24px;
+  width: 452px;
+  height: 52px;
+  padding: 12px 20px;
+  border-radius: 4px 0 0 4px;
+  background: #F2F2F2;
+  box-sizing: border-box;
+  border: none;
+  color: rgba(0, 0, 0, 0.6);
+  vertical-align: top;
+}
+
+.subscribe-button {
+  width: 232px;
+  height: 52px;
+  padding: 8px 50px;
+  background: #82B3D3;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+/* Footer */
+
+.page-footer {
+  height: 50px;
+  background-color:#fff;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 142px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts li {
+  padding: 0 10px;
+}
+
+.contacts a {
+  width: 25px;
+  height: 18px;
+  display: inline-block;
+}
+
+.vk {
+  background: url(../images/social-vk.svg) no-repeat center;
+}
+
+.tg {
+  background: url(../images/social-telegram.svg) no-repeat center;
+}
+
+.yt {
+  background: url(../images/social-youtube.svg) no-repeat center;
+}
+
+.phone {
+  margin: 0;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.academy {
+  display: inline-block;
+  width: 115px;
+  height: 34px;
+  background: url(../images/academy-logo.svg) no-repeat center;
 }
