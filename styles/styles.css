@@ -519,6 +519,20 @@ h2 {
   margin-top: 40px;
 }
 
+.form-section {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 70px;
+  border: none;
+}
+
+.parameters div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
 .select legend {
   margin: 0;
   padding: 0;
@@ -527,6 +541,9 @@ h2 {
   line-height: 24px;
   text-transform: capitalize;
   color: #FFFFFF;
+}
+
+.parameters legend {
   margin-bottom: 16px;
 }
 
@@ -535,20 +552,278 @@ h2 {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
-  
-}
-
-.form-section {
   display: flex;
-  column-gap: 70px;
-  margin: 0;
-  padding: 0;
+  column-gap: 16px;
 }
 
-.parameters div {
+.order .price,
+.order .buttons {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+}
+
+.buttons {
+  justify-content: flex-end;
+}
+
+.price-limiter {
+  font-size: 0;
+  margin-top: 32px;
+}
+
+.price .range {
+  margin-top: auto;
+}
+
+.price-limiter div {
+  display: inline-block;
+  position: relative;
+}
+
+.price-limiter input {
+  margin: 0;
+  width: 103px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  padding: 12px 20px;
+  background: #F2F2F2;
+  border: none;
+  appearance: textfield;
+}
+
+.price-limiter input::-webkit-outer-spin-button,
+.price-limiter input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.price-limiter .input-from {
+  border-radius: 4px 0 0 4px;
+}
+
+.price-limiter .input-to {
+  margin-left: 2px;
+  border-radius: 0 4px 4px 0;
+}
+
+.price-limiter div::after {
+  position: absolute;
+  height: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.price-limiter .price-from::after {
+  content: "от";
+  width: 17px;
+  top: 12px;
+  right: 20px;
+}
+
+.price-limiter .price-to::after {
+  content: "до";
+  width: 20px;
+  top: 12px;
+  right: 20px;
+}
+
+.buttons .button {
+  border: none;
+  font-style: 16px;
+  line-height: 20px;
+  background-color: #82B3D3;
+}
+
+.buttons .reset-button {
+  background-color: transparent;
+  margin-top: 32px;
+}
+
+.search-results {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  background-color: #FFFFFF;
+}
+
+.sorting {
+  display: flex;
+  align-items: center;
+}
+.sorting p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.sorting-options {
+  width: 292px;
+  height: 49px;
+  margin-left: auto;
+  padding: 10px 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.display-options {
+  margin: 0;
+  padding: 0;
+  margin-left: 70px;
+  list-style: none;
+  display: flex;
+  column-gap: 8px;
+}
+
+.display-options button {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.display-options .current {
+  border: 2px solid #000000;
+}
+
+.display-options .grid {
+  background: url(../images/grid.svg) no-repeat center;
+}
+
+.display-options .one-card {
+  background: url(../images/card.svg) no-repeat center;
+}
+
+.display-options .list {
+  background: url(../images/list.svg) no-repeat center;
+}
+
+.results {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.results .card {
+  padding: 20px;
+  display: grid;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  grid-template-columns: repeat(2,140px);
+  gap: 16px 20px;
+}
+
+.results img {
+  width: 300px;
+  height: 212px;
+  grid-column: span 2;
+}
+
+.results p {
+  margin: 0;
+}
+
+.results .caption {
+  grid-column: span 2;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.housing-type,
+.start-price {
+  color: #333333;
+}
+
+.start-price {
+  text-align: right;
+}
+
+.card .button {
+  padding: 8px 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.card .card-favorite {
+  background-color: #82B3D3;
+}
+
+.card .rankings {
+  padding: 9px 0 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  background: #F2F2F2;
+  border-radius: 4px;
+}
+
+.card .star-raiting {
+  padding: 10px 0;
+}
+
+.card .star {
+  width: 18px;
+  height: 17px;
+  margin-right: 6px;
+  background: url(../images/star.svg) no-repeat center;
+  display: inline-block;
+}
+
+.search-results hr {
+  margin-top: 40px;
+  height: 1px;
+  color: #E6E6E6;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  column-gap: 8px;
+  margin-top: 40px;
+}
+
+.pagination a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.pagination .current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination .ellipsis {
+  background-color: transparent;
+  color: #000000;
 }
 
 .catalog-subscribe {
