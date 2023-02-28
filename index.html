@@ -117,24 +117,28 @@
       <a href="https://htmlacademy.ru/" class="academy"><span class="visually-hidden">HTMLAcademy</span></a>
     </footer>
 
-    <div class="overlay visually-hidden">
+    <div class="overlay">
       <div class="popup">
         <h2 class="heading">Поиск гостиницы в Седоне</h2>
         <a class="popup-close" href="#">закрыть</a>
         <form action="#" class="popup-search">
-          <label for="">Дата заезда:<input type="date" name="arrival" id=""></label>
-          <label for="">Дата выезда:<input type="date" name="departure" id=""></label>
-          <div class="people">
-            <label for="">Взрослые
+          <label for="#arrival">Дата заезда:</label>
+          <input type="text" placeholder="укажите дату" name="arrival" id="arrival">
+          <label for="#departure">Дата выезда:</label>
+          <input type="text" placeholder="укажите дату" name="departure" id="departure">
+          <label for="#adults">Взрослые:</label>
+          <div class="wrapper">
+            <div class="adults">
               <span class="decr"></span>
-              <input type="number" name="adults" id="">
+              <input type="number" name="adults" id="adults">
               <span class="incr"></span>
-            </label>
-            <label for="">Дети
+            </div>
+            <label for="#kids">Дети:</label>
+            <div class="kids">
               <span class="decr"></span>
-              <input type="number" name="kids" id="">
+              <input type="number" name="kids" id="kids">
               <span class="incr"></span>
-            </label>
+            </div>
           </div>
           <input class="button popup-submit" type="submit" value="найти">
         </form>
