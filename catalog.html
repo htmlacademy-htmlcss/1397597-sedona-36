@@ -2,22 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <title>Каталог</title>
 		<link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <h1 id="top" class="visually-hidden">Городок Седона в Аризоне</h1>
     <header class="page-header container">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <img src="images/logo-sedona.svg" alt="city of sedona">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
-          <li><a class="navigation-link" href="#">Главная</a></li>
+          <li><a class="navigation-link" href="index.html">Главная</a></li>
           <li><a class="navigation-link" href="#">О Седоне</a></li>
-          <li><a class="navigation-link" href="#">Гостиницы</a></li>
+          <li><a class="navigation-link active">Гостиницы</a></li>
         </ul>
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-user">
           <li><a class="search" href="#"><span class="visually-hidden">Поиск</span></a></li>
           <li><a class="favorite" href="#"><span class="favorite-number">12</span>
             <span class="visually-hidden">Избранное</span></a></li>
@@ -29,11 +30,11 @@
     <main class="main-content">
       <section class="selection container">
         <h1>Гостиницы Седоны</h1>
-        <div class="bread-crumbs">
-          <span class="home">Главная</span>
-          <span class="arrow"></span>
-          <span>Гостиницы</span>
-        </div>
+        <ul class="breadcrumbs">
+          <li><a href="index.html" class="home"><span class="visually-hidden">Главная</span></a></li>
+          <li><img src="images/arrow.svg" class="arrow" width="8" height="11"></img></li>
+          <li><a>Гостиницы</a></li>
+        </ul>
         <form class="select" action="#" method="post">
           <fieldset class="form-section parameters">
             <div class="infrastructure">
@@ -66,7 +67,7 @@
               </div>
             </div>
             <div class="buttons">
-              <input class="button" type="submit" value="применить">
+              <input class="button apply-button" type="submit" value="применить">
               <input class="button reset-button" type="reset" value="сбросить">
             </div>
           </fieldset>
@@ -136,7 +137,7 @@
         </div>
         <hr>
         <ul class="pagination">
-          <li><a class="current" href="#">1</a></li>
+          <li><a class="current">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
