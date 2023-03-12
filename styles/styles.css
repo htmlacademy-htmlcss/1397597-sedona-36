@@ -33,7 +33,7 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+.main-heading {
   margin: 0;
   padding: 0;
   font-size: 60px;
@@ -41,7 +41,7 @@ h1 {
   color: #FFFFFF;
 }
 
-h2 {
+.caption {
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -86,15 +86,15 @@ h2 {
 .navigation {
   display: flex;
   flex-grow: 1;
-  justify-content: space-between;
   align-items: center;
 }
 
 .navigation-list {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   column-gap: 32px;
 }
@@ -102,14 +102,17 @@ h2 {
 .navigation-user {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  margin-left: auto;
+  list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 268px;
 }
 
 .navigation-link {
   margin: 0;
-  padding: 20px 0 18px;
+  padding: 20px 0 20px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -121,6 +124,7 @@ h2 {
 }
 
 .active {
+  padding-bottom: 18px;
   border-bottom: 2px solid #756257;
 }
 
@@ -137,13 +141,16 @@ h2 {
   text-decoration: none;
 }
 
-.search {
-  background: url(../images/search.svg) no-repeat center;
+.search svg {
+  padding: 1px 0 0 1px;
 }
 
 .favorite {
-  background: url(../images/favorite.svg) no-repeat center;
   position: relative;
+}
+
+.favorite svg {
+  padding: 2px 1px 1px;
 }
 
 .favorite-number {
@@ -265,7 +272,7 @@ h2 {
   height: 385px;
 }
 
-.item-card h2 {
+.item-card h3 {
   width: 175px;
 }
 
@@ -362,7 +369,7 @@ h2 {
   background: none;
 }
 
-.item-offer h2 {
+.item-offer h3 {
   margin-top: 102px;
   position: relative;
   margin: 0 auto;
@@ -584,14 +591,26 @@ h2 {
   list-style: none;
   display: flex;
   align-items: center;
-  column-gap: 10px;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs a {
+  position: relative;
+  padding-left: 28px;
   display: block;
   font-size: 16px;
   text-decoration: none;
   color: #ffffff;
+}
+
+.breadcrumbs a:not(.home)::before {
+  content: "";
+  width: 8px;
+  height: 11px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background: url(../images/arrow.svg) no-repeat 0 0;
 }
 
 .breadcrumbs a:focus {
@@ -607,14 +626,11 @@ h2 {
 }
 
 .breadcrumbs .home {
+  padding-left: 0;
   vertical-align: middle;
   width: 13px;
   height: 15px;
   background: url(../images/home-icon.svg) no-repeat 0 0;
-}
-
-.breadcrumbs .arrow {
-  display: block;
 }
 
 .select {
@@ -892,7 +908,7 @@ input:focus + .mark {
   display: flex;
   align-items: center;
 }
-.sorting p {
+.sorting .heading {
   margin: 0;
   font-weight: 700;
   font-size: 30px;
@@ -1019,9 +1035,8 @@ input:focus + .mark {
 
 .results .caption {
   grid-column: span 2;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+  text-align: left;
+  text-transform: none;
 }
 
 .housing-type,
