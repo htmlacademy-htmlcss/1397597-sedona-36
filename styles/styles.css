@@ -92,6 +92,7 @@ body {
 .navigation-list {
   margin: 0;
   padding: 0;
+  width: 500px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -100,14 +101,13 @@ body {
 }
 
 .navigation-user {
-  margin: 0;
-  padding: 0;
-  margin-left: auto;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   max-width: 268px;
+  margin-left: auto;
+  column-gap: 0;
+}
+
+.navigation-user li {
+  font-size: 0;
 }
 
 .navigation-link {
@@ -653,7 +653,7 @@ body {
   row-gap: 16px;
 }
 
-.select legend {
+.select .legend {
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -663,7 +663,7 @@ body {
   color: #FFFFFF;
 }
 
-.parameters legend {
+.parameters .legend {
   margin-bottom: 16px;
 }
 
@@ -1187,10 +1187,6 @@ input:focus + .mark {
 .catalog-subscribe .subtitle {
   color: #333333;
 }
-
-/* .overlay {
-  display: hidden;
-} */
 
 .overlay::before {
   content: "";
