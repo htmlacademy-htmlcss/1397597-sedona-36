@@ -228,7 +228,7 @@ body {
 .jumbotron {
   background: #ffffff url(../images/index-bg.jpg) no-repeat 0 0;
   width: 1200px;
-  height: 746px;
+  padding-bottom: 90px;
 }
 
 .advantages {
@@ -249,12 +249,13 @@ body {
 }
 
 .jumbotron .heading {
+  padding: 0 70px;
   padding-top: 554px;
-  width: 620px;
 }
 
-.jumbotron p:last-child {
+.jumbotron p {
   margin: 0 auto;
+  padding: 0 70px;
   margin-top: 25px;
   font-size: 22px;
   line-height: 26px;
@@ -437,7 +438,7 @@ body {
 }
 
 .subscribe .email {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-size: 18px;
   line-height: 24px;
   width: 452px;
@@ -460,7 +461,7 @@ body {
   box-sizing: border-box;
   color: #FFFFFF;
   text-transform: uppercase;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -510,7 +511,7 @@ body {
   flex-grow: 1;
 }
 
-.contacts a {
+.contacts-link {
   width: 25px;
   height: 40px;
   display: flex;
@@ -518,19 +519,19 @@ body {
   align-items: center;
 }
 
-.contacts a:focus {
+.contacts-link:focus {
   outline: none;
 }
 
-.contacts a:focus path {
+.contacts-link:focus path {
   fill: #68A2CA;
 }
 
-.contacts a:hover path {
+.contacts-link:hover path {
   fill: #68A2CA;
 }
 
-.contacts a:active path {
+.contacts-link:active path {
   fill: rgba(104, 162, 202, 0.3);
 }
 
