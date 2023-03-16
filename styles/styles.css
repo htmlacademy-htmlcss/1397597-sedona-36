@@ -123,6 +123,19 @@ body {
   display: block;
 }
 
+.navigation-link:focus {
+  color: #756157;
+  outline: none;
+}
+
+.navigation-link:hover {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .active {
   padding-bottom: 18px;
   border-bottom: 2px solid #756257;
@@ -133,8 +146,7 @@ body {
   display: block;
 }
 
-.search,
-.favorite {
+.icon-ref {
   padding: 22px 12px;
   width: 20px;
   height: 20px;
@@ -151,6 +163,22 @@ body {
 
 .favorite svg {
   padding: 2px 1px 1px;
+}
+
+.icon-ref:focus {
+  outline: none;
+}
+
+.icon-ref:focus path {
+  fill:  #756157;
+}
+
+.icon-ref:hover path {
+  fill:  #756157;
+}
+
+.icon-ref:active path {
+  fill: rgba(117, 97, 87, 0.3);;
 }
 
 .favorite-number {
@@ -453,7 +481,7 @@ body {
   margin-bottom: 104px;
 }
 
-.subscribe .email {
+.email {
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -466,6 +494,20 @@ body {
   border: none;
   color: rgba(0, 0, 0, 0.6);
   vertical-align: top;
+}
+
+.email:focus {
+  border: none;
+  outline: 3px solid #83B3D3;
+}
+
+.email:hover {
+  background-color: #E6E6E6;
+}
+
+.email:active {
+  border: none;
+  outline: 2px solid #000000;
 }
 
 .subscribe-button {
